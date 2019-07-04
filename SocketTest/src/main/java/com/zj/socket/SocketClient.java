@@ -12,7 +12,8 @@ public class SocketClient {
 
 	public static void main(String[] args) throws UnknownHostException, IOException, InterruptedException {
 		
-		Socket socket = new Socket(InetAddress.getLocalHost(),4015);
+		//Socket socket = new Socket(InetAddress.getLocalHost(),4015); //单线程
+		Socket socket = new Socket(InetAddress.getLocalHost(),4016);//多线程
 		System.err.println("client");
 		
 		//socket.getOutputStream().write(2);

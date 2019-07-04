@@ -14,7 +14,7 @@ public class SocketServer {
 		ServerSocket server = new ServerSocket(4015);
 		System.err.println("server");
 		System.err.println(1);
-		Socket client = server.accept();//²úÉúsocketÁ¬½Ó
+		Socket client = server.accept();//äº§ç”Ÿsocketè¿æ¥
 		while(true) {
 			
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
@@ -22,7 +22,7 @@ public class SocketServer {
 			/*out.write("Hello");
 			out.flush();*/
 			System.err.println(2);
-			System.out.println(in.readLine());//ÕâÀï¶ÁÈ¡Êı¾İ¶Á²»µ½×èÈû
+			System.out.println(in.readLine());//è¿™é‡Œè¯»å–æ•°æ®è¯»ä¸åˆ°é˜»å¡
 			out.println("end");
 			out.flush();
 		}

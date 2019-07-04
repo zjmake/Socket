@@ -18,7 +18,7 @@ public class SocketClient {
 		//socket.getOutputStream().write(2);
 		BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 		PrintWriter out = new PrintWriter(socket.getOutputStream());
-		BufferedReader readStringIn = new BufferedReader(new InputStreamReader(System.in));//¶ÁÈ¡¿ØÖÆÌ¨Êı¾İ
+		BufferedReader readStringIn = new BufferedReader(new InputStreamReader(System.in));//è¯»å–æ§åˆ¶å°æ•°æ®
 		while(true) {
 			
 			out.println(readStringIn.readLine());

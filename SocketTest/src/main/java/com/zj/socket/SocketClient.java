@@ -23,7 +23,7 @@ public class SocketClient {
 			
 			out.println(readStringIn.readLine());
 			out.flush();
-		System.err.println(in.readLine());
+			System.err.println(in.readLine());
 		
 		}
 		

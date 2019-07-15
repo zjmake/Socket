@@ -3,4 +3,22 @@
   <groupId>com.zj</groupId>
   <artifactId>SocketTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  
+  <dependencies>
+	  	<!-- https://mvnrepository.com/artifact/org.wso2.org.apache.mina/mina-core -->
+		<!-- <dependency>
+		    <groupId>org.wso2.org.apache.mina</groupId>
+		    <artifactId>mina-core</artifactId>
+		    <version>1.1.7-wso2v4</version>
+		</dependency> -->
+  	<!-- https://mvnrepository.com/artifact/org.apache.mina/mina-core -->
+	<dependency>
+	    <groupId>org.apache.mina</groupId>
+	    <artifactId>mina-core</artifactId>
+	    <version>2.1.3</version>
+	</dependency>
+  	
+  	
+  </dependencies>
 </project>

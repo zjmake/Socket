@@ -18,8 +18,8 @@ public class ThreadSocket extends Thread{
 		    BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		    PrintWriter out = new PrintWriter(client.getOutputStream());
 			while(true) {
-					/*out.write("Hello");
-					out.flush();*/
+					out.write("Hello");
+					out.flush();
 					System.out.println(in.readLine());//这里读取数据读不到阻塞
 					out.println("end");
 					out.flush();
@@ -32,7 +32,10 @@ public class ThreadSocket extends Thread{
 	public static void main(String[] args) throws IOException {
 		ServerSocket server = new ServerSocket(4016);
 		while(true) {
-			new ThreadSocket(server.accept()).start();
+			//接收客户端套接字
+			Socket clientAccept = server.accept();
+			new ThreadSocket(clientAccept).start();
+			System.out.println("aaa");
 		}
 		
 	}

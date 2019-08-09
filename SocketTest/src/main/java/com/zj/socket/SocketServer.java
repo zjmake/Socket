@@ -14,15 +14,15 @@ public class SocketServer {
 		ServerSocket server = new ServerSocket(4015);
 		System.err.println("server");
 		System.err.println(1);
-		Socket client = server.accept();//产生socket连接
+		Socket client = server.accept();//浜х敓socket杩炴帴
 		while(true) {
 			
 			BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			PrintWriter out = new PrintWriter(client.getOutputStream());
-			/*out.write("Hello");
-			out.flush();*/
+			out.write("Hello");
+			out.flush();
 			System.err.println(2);
-			System.out.println(in.readLine());//这里读取数据读不到阻塞
+			System.out.println(in.readLine());//杩欓噷璇诲彇鏁版嵁璇讳笉鍒伴樆濉�
 			out.println("end");
 			out.flush();
 		}

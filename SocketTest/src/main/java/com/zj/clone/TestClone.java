@@ -9,6 +9,7 @@ public class TestClone {
 		System.out.println(a+"=a");
 		System.out.println(b+"=b");
 		a.setAge(2);
+		a.setH(1);
 		int[] arg2={2,2};
 		a.setArg(arg2);
 		System.out.println("修改之后----------------------------------");
@@ -20,6 +21,7 @@ public class TestClone {
 		System.out.println(a1+"=a1");
 		System.out.println(b1+"=b1");
 		a1.setAge(2);
+		a1.setH(1);
 		a1.setArg(arg2);
 		System.out.println("修改之后----------------------------------");
 		System.out.println(a1+"=a1");

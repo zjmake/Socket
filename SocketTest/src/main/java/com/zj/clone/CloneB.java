@@ -7,8 +7,19 @@ public class CloneB implements Cloneable{
 	private int age;
 	private String name;
 	private int[] arg;
+	private Integer h=3;
 	
 	
+	public Integer getH() {
+		return h;
+	}
+
+
+	public void setH(Integer h) {
+		this.h = h;
+	}
+
+
 	public CloneB() {
 		super();
 	}
@@ -55,22 +66,26 @@ public class CloneB implements Cloneable{
 	}
 
 
-	@Override
-	public String toString() {
-		return "CloneB [age=" + age + ", name=" + name + ", arg=" + Arrays.toString(arg) + "]";
-	}
+	
 
 
 	public CloneB clone() {
 		CloneB b = null;
 		try {
 			b=(CloneB)super.clone();
-			b.arg=Arrays.copyOf(this.arg, arg.length);
+			b.arg=this.arg.clone();
+			
 		} catch (CloneNotSupportedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return b;
+	}
+
+
+	@Override
+	public String toString() {
+		return "CloneB [age=" + age + ", name=" + name + ", arg=" + Arrays.toString(arg) + ", h=" + h + "]";
 	}
 
 }

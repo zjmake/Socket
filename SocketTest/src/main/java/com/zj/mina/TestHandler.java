@@ -26,7 +26,9 @@ public class TestHandler extends IoHandlerAdapter{
  
 	@Override
 	public void messageSent(IoSession session, Object message) throws Exception {
-		System.out.println("messageSent");
+		System.out.println("messageSentA");
+		Thread.sleep(1000*5);
+		session.wait(System.currentTimeMillis());
 	}
  
 	@Override

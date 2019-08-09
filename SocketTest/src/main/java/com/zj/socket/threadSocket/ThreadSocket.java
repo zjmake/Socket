@@ -30,6 +30,7 @@ public class ThreadSocket extends Thread{
 	}
 	
 	public static void main(String[] args) throws IOException {
+		@SuppressWarnings("resource")
 		ServerSocket server = new ServerSocket(4016);
 		while(true) {
 			//接收客户端套接字
